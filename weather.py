@@ -20,10 +20,10 @@ def formatweather(wdict):
         temp = wdict["temperature_string"]
         time = wdict["observation_time"]
         weatherstring = """
-        %s
-        %s
-        air pressure %s
-        %s
+%s
+%s
+air pressure %s
+%s
         """ % (location, temp, pressure, time)
         return weatherstring
 
