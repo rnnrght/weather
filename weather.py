@@ -5,13 +5,19 @@ import pywapi
 
 
 def getlocation():
+    """query user for location"""
+
     loc = raw_input("enter a weather station code ")
     return loc.upper()
 
 def getweathernoaa(loc):
+    """retrieve weather from noaa for loc, an uppercase 4 character string"""
+
     return pywapi.get_weather_from_noaa(loc)
 
 def formatweather(wdict):
+    """returns a formatted weather report"""
+
     if wdict == {'error': 'Could not connect to NOAA'}:
         print wdict["error"]
     else:
