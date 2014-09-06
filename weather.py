@@ -33,5 +33,10 @@ air pressure %s
         """ % (location, temp, pressure, time)
         return weatherstring
 
+def htmlweather(wdict):
+#TODO:    """return an html table of the weather report"""
+    pass
+
+
 if __name__ == '__main__':
     print(formatweather(getweathernoaa(getlocation())))
